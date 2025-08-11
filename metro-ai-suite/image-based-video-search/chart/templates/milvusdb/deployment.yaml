@@ -61,6 +61,10 @@ spec:
           mountPath: /run/milvus
         - name: milvus-tmp
           mountPath: /tmp/milvus
+        - name: milvus-etcd
+          mountPath: /var/libe/milvus
+        - name: milvus-var-lib
+          mountPath: /var/lib/milvus
         {{- if .Values.milvusdb.resources }}
         resources:
           {{ .Values.milvusdb.resources | toYaml | nindent 10 }}
@@ -72,6 +76,10 @@ spec:
       - name: milvus-runtime
         emptyDir: {}
       - name: milvus-tmp
+        emptyDir: {}
+      - name: milvus-etcd
+        emptyDir: {}
+      - name: milvus-var-lib
         emptyDir: {}
       {{- if .Values.pullSecrets }}
       imagePullSecrets:
