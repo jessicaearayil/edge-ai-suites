@@ -129,6 +129,7 @@ a pre-step to prepare models may be needed
       - App UI: `http://localhost:3000`
       - Search UI: `http://localhost:9000/docs`
       - MilvusDB UI: `http://localhost:8000/`
+    > Note: RTSP stream via remote desktop can be accessed at `rtsp://<ip-addr>:8554/stream`. Replace `<ip-addr>` with your remote desktop IP
 
 
 7. **Run the Application**:
